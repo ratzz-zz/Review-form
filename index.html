@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1 id="title">Review for a free ice cream!</h1>
+        <p id="description">Please fill out this form with the required information</p>
+        <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+            <fieldset>
+                <legend>Customer's info</legend>
+                <label for="name" id="name-label">Enter your name: <input id="name" type="text" placeholder="Enter your full name" name="name" required /></label>
+                <label for="email" id="email-label">Enter your email: <input id="email" type="email" placeholder="Must contain @" name="email" required /></label>
+                <label for="number" id="number-label">Enter your birth month: <input id="number" type="number" min="1" max="12" placeholder="1=Jan" name="birth-month" required /></label>
+            </fieldset>
+            <fieldset>
+                <legend>Select your ice cream</legend>
+                <label for="dropdown">Flavor
+                    <select id="dropdown" name="flavor">
+                        <option value="option-one">Cookies and cream</option>
+                        <option value="option-two">Vanilla chai</option>
+                        <option value="option-three">Red wine</option>
+                    </select>
+                </label>
+                <label for="cone"><input id="cone" name="cup-type" class="inline" type="radio" value="cone" checked />Cone</label>
+                <label for="cup"><input id="cup" name="cup-type" class="inline" type="radio" value="cup" />Cup</label>
+            </fieldset>
+            <fieldset>
+                <legend>Write your review!</legend>
+                <p> What are your favorite flavors? </p>
+                <label for="flavor-one"><input id="flavor-one" type="checkbox" class="inline" value="flavor-one" name="likes">Super double chocolate with extra chocolate</label>
+                <label for="flavor-two"><input id="flavor-two" type="checkbox" class="inline" value="flavor-two" name="likes"> Vanilla marshmellow</label>
+                <label for="flavor-three"><input id="flavor-three" type="checkbox" class="inline" value="flavor-three" name="likes">Tuti fruti tornado</label>
+                <label for="flavor-four"><input id="flavor-four" type="checkbox" class="inline" value="flavor-four" name="likes">Berries supreme</label>
+                <label for="flavor-five"><input id="flavor-five" type="checkbox" class="inline" value="flavor-five" name="likes">Special Tobalá Mezcal</label>
+                <label for="review">Your review:
+                    <textarea id="review" name="review" rows="5" cols="50" placeholder="I like your service and ice cream!"></textarea>
+                </label>
+            </fieldset>
+            <input id="submit" type="submit" value="Submit" />
+        </form>
+    </body>
 </html>
